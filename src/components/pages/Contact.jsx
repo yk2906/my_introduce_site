@@ -1,9 +1,11 @@
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, Input, Stack, Textarea } from "@chakra-ui/react";
 import styled from "styled-components";
+import { init, sendForm, send } from "emailjs-com";
 
 import { Heading } from "../atoms/Heading";
 import { Pragraph } from "../atoms/Pragraph";
 import { SubHeading } from "../atoms/SubHeading";
+import { PrimaryButton } from "../atoms/button/PrimaryButton";
 
 export const Contact = () => {
   return (
@@ -16,12 +18,14 @@ export const Contact = () => {
         direction="column"
         align="center"
       >
-        <Box p="20px" h="100%" display="flex" alignItems="center">
+        <Box p="20px" display="flex">
           <Heading>Contact</Heading>
         </Box>
-        <Box>
-          <SubHeading>test</SubHeading>
-        </Box>
+        <Stack spacing={6} py={4} px={10}>
+          <Input bg="white" placeholder="お名前" />
+          <Textarea bg="white" placeholder="お問い合わせ内容" />
+          <PrimaryButton>送信</PrimaryButton>
+        </Stack>
       </Flex>
     </>
   );

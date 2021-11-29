@@ -44,7 +44,7 @@ export const About = () => {
         direction="column"
         align="center"
       >
-        <Box p="20px" h="100%" display="flex" alignItems="center">
+        <Box p="20px" display="flex">
           <Heading>About</Heading>
         </Box>
         <Box>
